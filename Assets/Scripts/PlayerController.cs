@@ -85,6 +85,7 @@ public class PlayerController : MonoBehaviour {
 			anim.SetBool ("DieState", true);
 		yield return new WaitForSeconds (1.0f);
 		GameController.Instance.GameOver ();
+   
 	}
 
 

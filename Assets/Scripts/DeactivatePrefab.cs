@@ -11,7 +11,7 @@ public class DeactivatePrefab : MonoBehaviour {
 
 	void Update()
 	{
-		if (player.transform.position.y + 7 <= this.gameObject.transform.position.y)		
+		if (player.transform.position.y + 270 <= this.gameObject.transform.position.y)		
 			this.gameObject.SetActive (false);
 	}
 

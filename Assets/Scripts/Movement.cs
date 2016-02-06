@@ -60,7 +60,13 @@ public class Movement : MonoBehaviour {
 		if (playerController.moving.x != 0 && playerRigidbody.velocity.y == 0) {
 			if (Mathf.Abs (playerRigidbody.velocity.x) < maxVelocity.x) {
 				forceX = playerController.moving.x * speed;
-			} 
+			}
+
+            if (!grounded)
+            {
+                playerRigidbody.velocity = new Vector2(0, 100.0f);
+                Debug.Log("!GROUNDED");
+            }
 
 			if (playerController.moving.y != 0 && grounded) {
 				Debug.Log("Grpunded " + grounded);
@@ -74,7 +80,7 @@ public class Movement : MonoBehaviour {
 		//movement.Set (playerController.moving.x, 0, 0);
 		//movement = movement * speed * Time.deltaTime;
 		//playerRigidbody.MovePosition (transform.position + movement);
-		CheckBounds ();
+		//CheckBounds ();
 		//playerRigidbody.AddForce (new Vector2 (forceX, forceY));
 	}
 	

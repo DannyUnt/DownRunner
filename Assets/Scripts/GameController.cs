@@ -6,7 +6,7 @@ public class GameController : MonoBehaviour {
 	private bool isDead;
 	private bool pause;
 	Vector3 startPosition;
-	Vector3 offsetY = new Vector3(0,7,0);
+	Vector3 offsetY = new Vector3(0,270,0);
 
 	private static GameController _instance;
 
